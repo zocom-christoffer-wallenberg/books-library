@@ -2,11 +2,15 @@ import { createStore } from 'vuex'
 
 export default createStore({
   state: {
-    books: []
+    books: [],
+    selectedBook: {}
   },
   mutations: {
     addBook(state, books) {
       state.books = books;
+    },
+    selectBook(state, book) {
+      state.selectedBook = book;
     }
   },
   actions: {
