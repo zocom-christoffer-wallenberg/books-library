@@ -27,7 +27,7 @@ export default {
   name: 'SelectedBook',
   computed: {
     book() {
-      return this.$store.state.selectedBook;
+      return this.$store.state.books.filter((book) => { return book.id === parseInt(this.$route.params.id) })[0];
     }
   },
   methods: {

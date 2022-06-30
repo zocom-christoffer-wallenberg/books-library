@@ -27,7 +27,7 @@ export default {
   methods: {
     selectBook() {
       this.$store.commit('selectBook', this.book);
-      this.$router.push('/book');
+      this.$router.push(`/book/${this.book.id}`); // /book/1
     }
   }
 }
